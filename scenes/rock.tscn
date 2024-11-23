@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmcdomircnvf6"]
+
+[ext_resource type="Script" path="res://scripts/rock.gd" id="1_yq2wh"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5pl0o"]
+
+[node name="rock" type="RigidBody3D"]
+script = ExtResource("1_yq2wh")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1.00956, 0, 0, 0, 1.00956, 0, 0, 0, 1.00956, 0, 0, 0)
+radius = 0.1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+shape = SubResource("SphereShape3D_5pl0o")
